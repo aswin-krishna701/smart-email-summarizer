@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Email Summarizer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Smart Email Summarizer</h1>
+      <p>Summarize emails, detect priority, identify tone, and suggest quick replies.</p>
+    </header>
+
+    <section class="input-section">
+      <label for="emailText">Email Text</label>
+      <textarea
+        id="emailText"
+        placeholder="Paste email text here or use Extract Selected Text..."
+      ></textarea>
+
+      <div class="button-group">
+        <button id="analyzeBtn">Analyze Email</button>
+        <button id="extractBtn" class="secondary-btn">Extract Selected Text</button>
+        <button id="clearBtn" class="clear-btn">Clear</button>
+      </div>
+
+      <p class="privacy-note">
+        Privacy note: This extension processes only pasted or selected email text and does not permanently store email content.
+      </p>
+    </section>
+
+    <div id="messageBox" class="message hidden"></div>
+
+    <div id="loading" class="loading hidden">
+      Analyzing email...
+    </div>
+
+    <section id="result" class="result hidden">
+      <div class="result-card">
+        <h3>Summary</h3>
+        <p id="summary"></p>
+      </div>
+
+      <div class="result-card">
+        <h3>Priority</h3>
+        <p id="priority"></p>
+      </div>
+
+      <div class="result-card">
+        <h3>Priority Reason</h3>
+        <p id="priorityReason"></p>
+      </div>
+
+      <div class="result-card">
+        <h3>Tone</h3>
+        <p id="tone"></p>
+      </div>
+
+      <div class="result-card">
+        <h3>Key Points</h3>
+        <ul id="keyPoints"></ul>
+      </div>
+
+      <div class="result-card">
+        <h3>Action Items</h3>
+        <ul id="actionItems"></ul>
+      </div>
+
+      <div class="result-card">
+        <h3>Suggested Reply</h3>
+        <p id="suggestedReply"></p>
+        <button id="copyReplyBtn" class="secondary-btn">Copy Reply</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
