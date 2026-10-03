@@ -311,27 +311,6 @@ This project follows a privacy-focused design:
 
 ---
 
-## GitHub Safety Note
-
-Do not upload these files or folders to GitHub:
-
-```text
-backend/.env
-backend/venv/
-__pycache__/
-*.pyc
-```
-
-Make sure `.gitignore` contains:
-
-```gitignore
-backend/.env
-backend/venv/
-__pycache__/
-*.pyc
-```
-
----
 
 ## Project Status
 
